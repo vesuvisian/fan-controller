@@ -1,0 +1,33 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "CommandLinePlugin": {
+            "DEVICES": [
+                {
+                    "name": "ceiling light",
+                    "port": 49915,
+                    "on_cmd": "python3 /home/pi/fauxmo/switch.py light",
+                    "off_cmd": "python3 /home/pi/fauxmo/switch.py light",
+                    "use_fake_state": true
+                },
+                {
+                    "name": "fan",
+                    "port": 49916,
+                    "on_cmd": "python3 /home/pi/fauxmo/switch.py fan",
+                    "off_cmd": "python3 /home/pi/fauxmo/switch.py fan",
+                    "use_fake_state": true
+                },
+                {
+                    "name": "fan speed",
+                    "port": 49917,
+                    "on_cmd": "python3 /home/pi/fauxmo/switch.py fast",
+                    "off_cmd": "python3 /home/pi/fauxmo/switch.py slow",
+                    "use_fake_state": true
+                }
+
+            ]
+        }
+    }
+}
